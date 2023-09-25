@@ -1,0 +1,1 @@
+postgresql+asyncpg://fem_track_user:fem_track_pass@0.0.0.0:5587/fem_track
