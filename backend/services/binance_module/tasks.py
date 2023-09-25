@@ -16,7 +16,6 @@ def save_data_with_redis_in_db_task():
         last_history_obj  = query.first()
         redis_keys = connect_redis_sync.keys()
         if bytes(last_history_obj.key, 'utf-8') in redis_keys:
-            # TODO сохранить первую запись в редис в бд
             position = redis_keys.index(bytes(last_history_obj.key, 'utf-8')) + 1
         else:
             position = 0
