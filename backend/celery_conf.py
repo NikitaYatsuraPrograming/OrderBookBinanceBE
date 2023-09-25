@@ -20,11 +20,7 @@ app.conf.timezone = 'UTC'
 
 app.conf.beat_schedule = {
     'start_every_1_hour_save_data_with_redis_in_db_task': {
-        'task': 'services.binance_module.tasks.save_data_with_redis_in_db_task',
-        'schedule': crontab(minute='*/1')
-    },
-# 'start_every_1_hour_save_data_with_redis_in_db_task': {
-#         'task': 'services.binance_module.tasks.save_data_with_redis_in_db_task',
-#         'schedule': crontab(hour='*/1')
-#     },
+            'task': 'services.binance_module.tasks.save_data_with_redis_in_db_task',
+            'schedule': crontab(hour='*/1')
+        },
 }
